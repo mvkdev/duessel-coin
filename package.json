@@ -1,0 +1,21 @@
+{
+  "name": "duessel-coin",
+  "version": "1.0.0",
+  "description": "blockchain demo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-test": "nodemon dev-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvkdev/duessel-coin.git"
+  },
+  "author": "Michaelvon Koczian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mvkdev/duessel-coin/issues"
+  },
+  "homepage": "https://github.com/mvkdev/duessel-coin#readme",
+  "dependencies": {}
+}
