@@ -1,5 +1,7 @@
 const webSocket 		= require('ws');
 
+let ports = [];
+
 const P2P_PORT = process.env.P2P_PORT || 5001;
 
 // if PEERS exists, split the websockets addresses, else set PEERS to empty array.
@@ -16,8 +18,10 @@ class P2PServer{
 
 	listen() {
 		const server = new webSocket.Server({port: P2P_PORT});
-		server.on('connection', socket => this.connectSocket(socket));
-
+		server.on('connection', (socket,req) => {
+			console.log(peers);
+			this.connectSocket(socket);
+		})
 		this.connect2Peers();
 
 		console.log(`Listening for socket connections on ${P2P_PORT}`);

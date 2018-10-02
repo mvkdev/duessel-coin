@@ -3,8 +3,11 @@ const express 		= require('express'),
 	  P2PServer		= require('./p2p-server'),
 	  BlockChain    = require('./blockchain');
 
+let ports = []; 
+
 
 const HTTP_PORT = process.env.HTTP_PORT || 3001;
+
 
 const app = express();
 const bc = new BlockChain();
