@@ -1,4 +1,5 @@
-const crypto	 = require('crypto');
+// const crypto	 = require('crypto');
+const  ChainUtil = require('../chain-util');
 
 const locus 	 = require('locus');
 
@@ -55,7 +56,8 @@ class Block {
 	}
 
 	static hash(timestamp,lastHash,data,nonce,difficulty) {
-		let  hashedData	 = crypto.createHash('sha256').update(`${timestamp}${lastHash}${data}${nonce}${difficulty}`).digest('hex');
+		// let  hashedData	 = crypto.createHash('sha256').update(`${timestamp}${lastHash}${data}${nonce}${difficulty}`).digest('hex');
+		let hashedData = ChainUtil.hash(`${timestamp}${lastHash}${data}${nonce}${difficulty}`);
 		return hashedData;
 	}
 

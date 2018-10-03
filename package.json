@@ -10,7 +10,7 @@
     "dev": "nodemon app.js"
   },
   "jest": {
-    "testEnvironment" : "node"
+    "testEnvironment": "node"
   },
   "repository": {
     "type": "git",
